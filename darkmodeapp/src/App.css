@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif; /* Use the Inter font */
+  font-family: 'Inter', sans-serif; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -37,6 +37,16 @@ body {
   background-color: var(--bg-color);
   border-radius: 50%;
   transition: transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+
+
+.switch-container.light {
+  background-color: var(--border-color);
+}
+
+.switch-container.light .toggle-indicator {
+  left: 2px;
+  background-color: #000;
 }
 
 .switch-container.dark {
