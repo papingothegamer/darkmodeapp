@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,10 +9,15 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: 'Inter', sans-serif;
   transition: background-color 0.8s, color 0.8s;
   transition-timing-function: ease-in-out;
 }
 
+.container {
+  position: relative;
+  text-align: center;
+}
 
 .switch-container {
   display: flex;
@@ -40,7 +44,6 @@ body {
   transition: transform 0.8s ease-in-out, background-color 0.8s ease-in-out;
 }
 
-
 .switch-container.light {
   background-color: var(--border-color);
 }
@@ -61,4 +64,38 @@ body {
 
 .toggle-button {
   display: none; 
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 10px;
+  background-color: #000000;
+  margin-bottom: 20px;
+}
+
+.percentage-loader {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+.loading-bar.active {
+  animation: loading 3s linear forwards;
 }
